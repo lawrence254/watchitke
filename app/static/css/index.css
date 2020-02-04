@@ -1,0 +1,17 @@
+/* img{
+    height: 100%;
+}
+.posterPath{
+    height: 100%;
+} */
+
+.backgroundImage{
+    color: #ffffff;
+}
+.movie-details{
+    color: #ffffff;
+    font-size: 1.2em;
+    padding-right: 10%;
+    background-color: rgba(0,0,0,0.5);
+    width: 40%;
+}

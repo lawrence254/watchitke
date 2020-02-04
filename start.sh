@@ -1,0 +1,5 @@
+export MOVIE_API_KEY=7e71e907dd76aa2aea6fe16ba270239a
+
+export SECRET_KEY=015cd3e76a414c4dbb37db73981c739a
+
+python3 manage.py server
