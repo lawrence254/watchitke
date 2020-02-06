@@ -7,17 +7,20 @@
     <div>
         <!-- Poster background -->
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"
+            <div class="col-6"
                 style="background: url({{movie.poster}}) no-repeat center center;height: 100vh">
             </div>
 
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
+            <div class="col-6 movie-details">
                 <h3>{{ movie.title }}</h3>
-
                 <p class="overview"> {{ movie.overview }}</p>
                 <p class="ratings"> <b> {{ movie.vote_average }}</b> - <i>{{ movie.vote_count}} votes </i> </p>
-
-                <a class="ratings" href="/movie/review/new/{{movie.mId}}"> Write a new review</a>
+                <h4>Production Companies</h4>
+                {% for item in movie.production %}
+                {{ item.name }}, 
+                {% endfor %}
+                <br>
+                <a class="ratings btn btn-primary" href="/movie/review/new/{{movie.mId}}"> Write a new review</a>
 
             </div>
         </div>
@@ -25,7 +28,6 @@
 </div>
 <div class="container">
     <div class="row">
-
         <h1>Reviews</h1>
         <hr>
 
@@ -41,4 +43,9 @@
     </div>
 </div>
 
+
+
 {% endblock %}
+
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/jKCj3XuPG8M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

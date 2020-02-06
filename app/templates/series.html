@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{% import 'macros.html' as macro%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Styles block -->
+
+  {% if title %}
+  <title>{{title}}</title>
+  {% else %}
+  <title>Heres a list of the top TV Shows</title>
+  {% endif %}
+</head>
+
+<body>
+
+  
+  {%block content%}
+  <div class="container">
+    <form>
+        <input type="text" name="show_query" placeholder="Search for a show" class="form-control">
+        <input type="submit"  value="Submit" class="btn btn-default">
+    </form>
+
+</div>
+
+  <!-- Popular show section  -->
+  <h3> Popular TV Shows</h3>
+  <ul>
+    {{ macro.displayTVList(popular)}}
+  </ul>
+
+  <!-- Upcoming show  -->
+  <h3> Top Rated TV Shows </h3>
+  <ul>
+    {{ macro.displayTVList(top_rated)}}
+  </ul>
+  <!-- Now showing show -->
+  <h3>TV Shows On Air</h3>
+  <ul>
+    {{ macro.displayTVList(now_showing)}}
+  </ul>
+
+  {%endblock%}
+</body>
+
+</html>

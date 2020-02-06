@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+<!-- Content block -->
+{% block content %}
+<div class="container-flex backgroundImage" style="background: url({{show.background}})no-repeat;background-size: cover;width: 100%; background-color: rgba(0,0,0,0.5);">
+    <div>
+        <!-- Poster background -->
+        <div class="row">
+            <div class="col-6"
+                style="background: url({{show.poster}}) no-repeat center center;height: 100vh">
+            </div>
+
+            <div class="col-6 movie-details">
+                <h3>{{ show.title }}</h3>
+                <p class="overview"> {{ show.overview }}</p>
+                <p class="ratings"> <b> {{ show.vote_average }}</b> Date: <i>{{ show.first_air_date}} </i> </p>
+                <!-- <h4>Production Companies</h4>
+                {% for item in movie.production %}
+                {{ item.name }}, 
+                {% endfor %}
+                <br> -->
+                <!-- <a class="ratings btn btn-primary" href="/movie/review/new/{{movie.mId}}"> Write a new review</a> -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

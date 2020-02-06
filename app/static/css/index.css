@@ -13,5 +13,9 @@
     font-size: 1.2em;
     padding-right: 10%;
     background-color: rgba(0,0,0,0.5);
-    width: 40%;
+    /* width: 40%;
+    height: auto; */
+}
+.card-img{
+    padding: 0;
 }
